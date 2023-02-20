@@ -2,10 +2,13 @@
 import os
 
 # Get the list of all files and directories
-path = "C://Users//Rithesh//Desktop"
-dir_list = os.listdir(path)
+path = "D:\Immigration"
+#dir_list = os.listdir(path)
 
-print("Files and directories in '", path, "' :")
+for path, subdirs, files in os.walk(path):
+    for name in files:
+        print(name, ":q", os.path.join(path, name))
 
-# prints all files
-print(dir_list)
+#print("Files and directories in '", path, "' :")
+
+#print('\n'.join(map(str, dir_list)))
