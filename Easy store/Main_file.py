@@ -1,5 +1,6 @@
 # import OS module
 import os
+import re
 
 # Get the list of all files and directories
 path = "D:\Immigration"
@@ -7,7 +8,8 @@ path = "D:\Immigration"
 
 for path, subdirs, files in os.walk(path):
     for name in files:
-        print(name, ":q", os.path.join(path, name))
+        names = re.split("_-", str(name))
+        print(names)
 
 #print("Files and directories in '", path, "' :")
 
